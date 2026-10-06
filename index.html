@@ -17,9 +17,13 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
+            background-color: #CC0033;
             color: #222;
             line-height: 1.6;
         }
@@ -29,26 +33,47 @@
         header {
             background-color: #1f2937;
             color: white;
-            text-align: center;
             padding: 70px 20px;
         }
 
-        header h1 {
-            font-size: 44px;
-            margin-bottom: 8px;
+        .header-container {
+            max-width: 950px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
         }
 
-        header h2 {
+        .profile-photo {
+            width: 210px;
+            height: 210px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-text {
+            max-width: 600px;
+        }
+
+        .header-text h1 {
+            font-size: 46px;
+            margin-bottom: 5px;
+        }
+
+        .header-text h2 {
             font-size: 21px;
             font-weight: normal;
             color: #d1d5db;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
 
-        header p {
-            max-width: 800px;
-            margin: auto;
+        .header-text p {
             font-size: 18px;
+            line-height: 1.7;
         }
 
         /* NAVIGATION */
@@ -57,20 +82,23 @@
             background-color: #111827;
             text-align: center;
             padding: 16px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             font-weight: bold;
-            margin: 0 18px;
+            margin: 0 20px;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #ffccd8;
         }
 
-        /* MAIN SECTIONS */
+        /* SECTIONS */
 
         section {
             max-width: 950px;
@@ -78,14 +106,14 @@
             background-color: white;
             padding: 40px;
             border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
         }
 
         section h2 {
             font-size: 28px;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #e5e7eb;
+            border-bottom: 3px solid #CC0033;
         }
 
         /* ABOUT */
@@ -103,10 +131,11 @@
         }
 
         .skill {
-            background-color: #e5e7eb;
+            background-color: #f2f2f2;
             padding: 10px 16px;
             border-radius: 20px;
             font-weight: bold;
+            border: 1px solid #ddd;
         }
 
         /* PROJECTS */
@@ -116,7 +145,7 @@
             padding: 25px;
             margin-bottom: 25px;
             border-radius: 8px;
-            border-left: 4px solid #1f2937;
+            border-left: 5px solid #CC0033;
         }
 
         .project:last-child {
@@ -129,17 +158,31 @@
         }
 
         .project p {
-            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            display: inline-block;
+            background-color: #CC0033;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        .project-link:hover {
+            background-color: #a8002a;
         }
 
         /* CONTACT */
 
         #contact p {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         #contact a {
-            color: #2563eb;
+            color: #CC0033;
             text-decoration: none;
             font-weight: bold;
         }
@@ -160,13 +203,24 @@
 
         /* MOBILE */
 
-        @media (max-width: 700px) {
+        @media (max-width: 750px) {
 
-            header h1 {
-                font-size: 34px;
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 25px;
             }
 
-            header h2 {
+            .profile-photo {
+                width: 180px;
+                height: 180px;
+            }
+
+            .header-text h1 {
+                font-size: 36px;
+            }
+
+            .header-text h2 {
                 font-size: 18px;
             }
 
@@ -179,30 +233,43 @@
                 display: inline-block;
                 margin: 5px 10px;
             }
-
         }
 
     </style>
 
 </head>
 
-
 <body>
 
 
-    <!-- HEADER / PERSONAL STATEMENT -->
+    <!-- HEADER -->
 
     <header>
 
-        <h1>Erik Johnson</h1>
+        <div class="header-container">
 
-        <h2>Finance Student | Rutgers Business School</h2>
+            <img
+                src="profile.jpg"
+                alt="Erik Johnson"
+                class="profile-photo"
+            >
 
-        <p>
-            I am a Finance student at Rutgers Business School with experience
-            in financial analysis, operations, and client service, interested
-            in building a career in the finance industry.
-        </p>
+            <div class="header-text">
+
+                <h1>Erik Johnson</h1>
+
+                <h2>Finance Student | Rutgers Business School</h2>
+
+                <p>
+                    I am a Finance student at Rutgers Business School with
+                    experience in financial analysis, operations, and client
+                    service, interested in building a career in the finance
+                    industry.
+                </p>
+
+            </div>
+
+        </div>
 
     </header>
 
@@ -231,11 +298,11 @@
         <p>
             I am currently pursuing a Bachelor of Science in Finance at
             Rutgers Business School with an expected graduation date of
-            May 2028. I have developed experience in financial analysis,
-            budgeting, client communication, and business operations.
-            I am interested in continuing to develop my financial knowledge
-            and professional skills through future opportunities in the
-            finance industry.
+            May 2028. Through my professional and academic experiences,
+            I have developed skills in financial analysis, budgeting,
+            client communication, and business operations. I am interested
+            in continuing to strengthen my financial knowledge and gain
+            experience within the finance industry.
         </p>
 
     </section>
@@ -282,7 +349,7 @@
 
     <section id="projects">
 
-        <h2>Projects</h2>
+        <h2>Projects & Certifications</h2>
 
 
         <!-- PROJECT 1 -->
@@ -294,12 +361,20 @@
             </h3>
 
             <p>
-                Completed a virtual banking job simulation focused on analyzing
-                customer trends and identifying client needs. Developed strategic
-                recommendations designed to improve customer satisfaction and
-                support business growth while strengthening financial analysis,
-                decision-making, and professional communication skills.
+                Completed a virtual job simulation through Forage focused on
+                consumer and business banking. Analyzed customer trends,
+                identified client needs, and developed strategic recommendations
+                to improve customer satisfaction and support business growth.
             </p>
+
+            <a
+                class="project-link"
+                href="https://www.theforage.com/completion-certificates/fMCqmt8qR4G85Puue/Lu5h6FDrPES9mKn3h_fMCqmt8qR4G85Puue_6aaa2746a473b0b49db55360_1789538609975_completion_certificate.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Forage Certificate
+            </a>
 
         </div>
 
@@ -309,16 +384,25 @@
         <div class="project">
 
             <h3>
-                Remove It NJ Financial & Operations Analysis
+                Bloomberg Market Concepts
             </h3>
 
             <p>
-                Supported the management of monthly cash flow, budgeting, and
-                financial analysis during an Operations Internship at Remove It NJ.
-                Worked with both residential and commercial projects, communicated
-                directly with clients, and adjusted strategies based on individual
-                project needs.
+                Completed Bloomberg Market Concepts to strengthen my
+                understanding of financial markets, economic indicators,
+                equities, fixed income, and Bloomberg financial tools.
+                The certification helped build my knowledge of how financial
+                information is used to analyze markets and investment decisions.
             </p>
+
+            <a
+                class="project-link"
+                href="https://portal.bloombergforeducation.com/certificates/whp6w32CQNg8syfDAUKMnfRx"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Bloomberg Certificate
+            </a>
 
         </div>
 
@@ -334,6 +418,7 @@
 
         <p>
             <strong>Email:</strong>
+
             <a href="mailto:eriktjohnson1125@gmail.com">
                 eriktjohnson1125@gmail.com
             </a>
@@ -341,8 +426,12 @@
 
         <p>
             <strong>LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/erik-t-johnson"
-               target="_blank">
+
+            <a
+                href="https://www.linkedin.com/in/erik-t-johnson"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
                 View My LinkedIn
             </a>
         </p>
