@@ -17,10 +17,6 @@
             padding: 0;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: Arial, Helvetica, sans-serif;
             background-color: #f4f6f8;
@@ -33,47 +29,26 @@
         header {
             background-color: #1f2937;
             color: white;
+            text-align: center;
             padding: 70px 20px;
         }
 
-        .header-container {
-            max-width: 950px;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
+        header h1 {
+            font-size: 44px;
+            margin-bottom: 8px;
         }
 
-        .profile-photo {
-            width: 210px;
-            height: 210px;
-            object-fit: cover;
-            object-position: center top;
-            border-radius: 50%;
-            border: 5px solid white;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .header-text {
-            max-width: 600px;
-        }
-
-        .header-text h1 {
-            font-size: 46px;
-            margin-bottom: 5px;
-        }
-
-        .header-text h2 {
+        header h2 {
             font-size: 21px;
             font-weight: normal;
             color: #d1d5db;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
-        .header-text p {
+        header p {
+            max-width: 800px;
+            margin: auto;
             font-size: 18px;
-            line-height: 1.7;
         }
 
         /* NAVIGATION */
@@ -82,23 +57,20 @@
             background-color: #111827;
             text-align: center;
             padding: 16px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             font-weight: bold;
-            margin: 0 20px;
+            margin: 0 18px;
         }
 
         nav a:hover {
             text-decoration: underline;
         }
 
-        /* SECTIONS */
+        /* MAIN SECTIONS */
 
         section {
             max-width: 950px;
@@ -163,7 +135,7 @@
         /* CONTACT */
 
         #contact p {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         #contact a {
@@ -188,24 +160,13 @@
 
         /* MOBILE */
 
-        @media (max-width: 750px) {
+        @media (max-width: 700px) {
 
-            .header-container {
-                flex-direction: column;
-                text-align: center;
-                gap: 25px;
+            header h1 {
+                font-size: 34px;
             }
 
-            .profile-photo {
-                width: 180px;
-                height: 180px;
-            }
-
-            .header-text h1 {
-                font-size: 36px;
-            }
-
-            .header-text h2 {
+            header h2 {
                 font-size: 18px;
             }
 
@@ -218,6 +179,7 @@
                 display: inline-block;
                 margin: 5px 10px;
             }
+
         }
 
     </style>
@@ -228,34 +190,19 @@
 <body>
 
 
-    <!-- HEADER -->
+    <!-- HEADER / PERSONAL STATEMENT -->
 
     <header>
 
-        <div class="header-container">
+        <h1>Erik Johnson</h1>
 
-            <img
-                src="profile.jpg"
-                alt="Erik Johnson"
-                class="profile-photo"
-            >
+        <h2>Finance Student | Rutgers Business School</h2>
 
-            <div class="header-text">
-
-                <h1>Erik Johnson</h1>
-
-                <h2>Finance Student | Rutgers Business School</h2>
-
-                <p>
-                    I am a Finance student at Rutgers Business School with
-                    experience in financial analysis, operations, and client
-                    service, interested in building a career in the finance
-                    industry.
-                </p>
-
-            </div>
-
-        </div>
+        <p>
+            I am a Finance student at Rutgers Business School with experience
+            in financial analysis, operations, and client service, interested
+            in building a career in the finance industry.
+        </p>
 
     </header>
 
@@ -284,11 +231,11 @@
         <p>
             I am currently pursuing a Bachelor of Science in Finance at
             Rutgers Business School with an expected graduation date of
-            May 2028. Through my professional and academic experiences,
-            I have developed skills in financial analysis, budgeting,
-            client communication, and business operations. I am interested
-            in continuing to develop my financial knowledge and gaining
-            experience in the finance industry.
+            May 2028. I have developed experience in financial analysis,
+            budgeting, client communication, and business operations.
+            I am interested in continuing to develop my financial knowledge
+            and professional skills through future opportunities in the
+            finance industry.
         </p>
 
     </section>
@@ -347,12 +294,11 @@
             </h3>
 
             <p>
-                Completed a virtual banking job simulation focused on
-                analyzing customer trends and identifying client needs.
-                Developed strategic recommendations to improve customer
-                satisfaction and support business growth while strengthening
-                financial analysis, decision-making, and professional
-                communication skills.
+                Completed a virtual banking job simulation focused on analyzing
+                customer trends and identifying client needs. Developed strategic
+                recommendations designed to improve customer satisfaction and
+                support business growth while strengthening financial analysis,
+                decision-making, and professional communication skills.
             </p>
 
         </div>
@@ -367,11 +313,11 @@
             </h3>
 
             <p>
-                Supported monthly cash flow management, budgeting, and
-                financial analysis during an Operations Internship at
-                Remove It NJ. Worked on residential and commercial projects,
-                communicated directly with clients, and adapted strategies
-                based on individual project needs.
+                Supported the management of monthly cash flow, budgeting, and
+                financial analysis during an Operations Internship at Remove It NJ.
+                Worked with both residential and commercial projects, communicated
+                directly with clients, and adjusted strategies based on individual
+                project needs.
             </p>
 
         </div>
@@ -388,7 +334,6 @@
 
         <p>
             <strong>Email:</strong>
-
             <a href="mailto:eriktjohnson1125@gmail.com">
                 eriktjohnson1125@gmail.com
             </a>
@@ -396,11 +341,8 @@
 
         <p>
             <strong>LinkedIn:</strong>
-
-            <a
-                href="https://www.linkedin.com/in/erik-t-johnson"
-                target="_blank"
-            >
+            <a href="https://www.linkedin.com/in/erik-t-johnson"
+               target="_blank">
                 View My LinkedIn
             </a>
         </p>
